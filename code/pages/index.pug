@@ -1,0 +1,49 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset="UTF-8")
+
+    title Partner
+
+    meta(name='description', content='')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(name='format-detection', content='telephone=no')
+
+    // Custom Browsers Color Start
+    meta(name='theme-color', content='#432928')
+    // Custom Browsers Color End
+
+    include blocks/scripts.pug
+    include blocks/styles.pug
+    include blocks/header.pug
+
+    include blocks/scr1.pug
+    include blocks/scr_questions.pug
+    include blocks/scr_advantages.pug
+    include blocks/scr_warranty.pug
+    include blocks/scr_footnote.pug
+
+    include blocks/footer.pug
+
+    +styles
+
+  body
+
+    +header
+
+    #page_wr.page_wr
+      
+      +scr1
+      +scr_questions
+      +scr_advantages
+      +scr_warranty
+      +scr_footnote
+
+      a.to-top
+        svg.icon
+          use(xlink:href="img/svg/sprite.svg#arrow")
+
+    +footer()
+
+    +scripts
